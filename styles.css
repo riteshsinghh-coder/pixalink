@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgb(#584688 #D24195 #F27236);
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 190px 2px;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    min-height: 23vh;
+}
+.titlebelow{
+color: white;
+font-weight: bolder;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px; /* Removes space below h1 */
+}
+
+.hero p {
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+    margin-top: 0; /* Removes space above p */
+}
+.titlehead{
+    background: linear-gradient(135deg, #584688, #D24195, #F27236); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+
+}
+
+
+
+.btn {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white; /* Ensure text is visible */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px; 
+    border-radius: 50px; /* Fully rounded border */
+    border: 2px solid  #D24195; /* Base border thickness */
+    
+    background: 
+        linear-gradient(black, black) padding-box, /* Inner button background */;
+
+/* Gradient border */
+    
+    transition: 0.3s ease-in-out;
+    position: relative; /* Required for proper centering */
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
+    background: linear-gradient(135deg, #584688, #D24195, #F27236);
+    border:2px solid black
+
+}
+
+
+.btn:hover {
+    background:linear-gradient(135deg, #584688, #D24195, #F27236) 1;
+    transform: scale(1.05);
+}
+
+/* Services */
+.services, .portfolio, .contact {
+    padding: 40px;
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 30%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Portfolio */
+.portfolio-gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-gallery img {
+    width: 30%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.portfolio-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact */
+input, textarea {
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+input:focus, textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+}
+
+/* Image Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Scrolling Experience Section */
+.experience {
+    text-align: center;
+    padding: 50px 20px;
+    background: #222;
+    color: white;
+}
+
+.scrolling-container {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-container p {
+    white-space: nowrap;
+    animation: scrollText 8s linear infinite;
+}
+
+@keyframes scrollText {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .portfolio-gallery {
+        flex-direction: column;
+    }
+
+    .portfolio-gallery img {
+        width: 90%;
+    }
+}
+/* Portfolio Container */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* Portfolio Container with Background Image */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+   
+    position: relative;
+}
+.portfolio {
+    position: relative;
+    background: url('../photo/sliders/emily-bernal-v9vII5gV8Lw-unsplash.jpg') no-repeat center center/cover;
+}
+
+/* Background overlay */
+.portfolio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; /* You can change this to any color */
+    opacity: 0.6; /* Adjust opacity as needed */
+    z-index: 0; /* Keeps overlay behind content */
+}
+
+/* Ensure content inside portfolio is above overlay */
+.portfolio * {
+    position: relative;
+    z-index: 1;
+}
+h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 24px; /* Adjust as needed */
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px; /* Small underline width */
+    height: 3px; /* Thickness of underline */
+    background: linear-gradient(90deg, #584688, #D24195, #F27236); /* Gradient color */
+    position: absolute;
+    bottom: -8px; /* Adjust spacing */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Portfolio Item */
+.portfolio-item {
+    width: 190px;
+    height: 82px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /* Adds a subtle background to make images more visible */
+    
+    border-radius: 10px;
+}
+
+.portfolio-image {
+    width: 220px;
+    height: 120px;
+    background-color: white;
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    border-radius: 10px;
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* Hover Effect */
+.portfolio-item img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+
+
+
+
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pixlink - Professional Graphic Design Services. Elevate your brand with custom logos, web design, and social media graphics.">
+    <meta name="keywords" content="graphic design, logo design, branding, UI/UX design, web design, social media graphics, creative agency">
+    <meta name="author" content="Pixlink">
+    <title>Pixlink - Elevate Your Brand with Stunning Graphic Design</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+            <img src="./photo/logo/Pixel-Ink-Logo (1).png" alt="Pixlink Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#experience">Our Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h1 data-aos="fade-up"> <span class="titlehead">Stunning, high-impact designs</span> that amplify engagement.
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+            <span class="titlebelow">PixINK</span> crafts stunning designs that captivate, enhance brand identity, and drive success with creativity, precision, <br>and strategic visual storytelling.
+        </p>
+        <a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="400">Read More</a>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 data-aos="fade-right">Expert Graphic Design Services</h2>
+        <p>We create high-quality visuals that leave a lasting impression. Explore our services:</p>
+        <div class="service-container">
+            <div class="service" data-aos="zoom-in">
+                <h3>Brand Identity & Logo Design</h3>
+                <p>Get a professional, memorable logo and a strong brand identity tailored for your business.</p>
+            </div>
+            <div class="service" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Web & UI/UX Design</h3>
+                <p>Modern, responsive websites and intuitive UI/UX designs to enhance user experience.</p>
+            </div>
+            <div class="service" data-aos="zoom-in" data-aos-delay="400">
+                <h3>Social Media Graphics</h3>
+                <p>Custom social media posts, banners, and ads to boost engagement and brand recognition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Black Background) -->
+    <section id="portfolio" class="portfolio" style=" color: white;">
+        <h2 data-aos="fade-right">Our Work</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-image"><img src="./photo/sliders/DT-1.png" class="portfolio-item" onclick="openModal(this)" alt="Creative Design 1"></div>
+            
+            <div class="portfolio-image"><img src="./photo/sliders/kc_1.png" class="portfolio-item" onclick="openModal(this)" alt="Creative Design 2"></div>
+            <div class="portfolio-image"><img src="./photo/sliders/usn.png" class="portfolio-item" onclick="openModal(this)" alt="Creative Design 3"></div>
+
+            <div class="portfolio-image"><img src="./photo/sliders/pw_1 (1).png" class="portfolio-item" onclick="openModal(this)" alt="Creative Design 5">
+            </div></div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2 data-aos="fade-right">Our Experience</h2>
+        <div class="scrolling-container">
+            <p>✔ 5+ Years in the Graphic Design Industry</p>
+            <p>✔ 500+ Successful Projects Completed</p>
+            <p>✔ Trusted by Over 300 Clients Worldwide</p>
+            <p>✔ Award-Winning Design Team</p>
+            <p>✔ Specialized in Branding, UI/UX & Digital Marketing Graphics</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 data-aos="fade-up">Let's Create Something Amazing</h2>
+        <p>Get in touch with us today! Tell us about your project, and we'll bring your vision to life.</p>
+        <form id="enquiry-form" data-aos="fade-up" data-aos-delay="200">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Tell us about your project" required></textarea>
+            <button type="submit" class="btn">Request a Consultation</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
