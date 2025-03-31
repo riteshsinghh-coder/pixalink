@@ -305,7 +305,7 @@ input:focus, textarea:focus {
 }
 .portfolio {
     position: relative;
-    background: url('../photo/sliders/emily-bernal-v9vII5gV8Lw-unsplash.jpg') no-repeat center center/cover;
+    background: url('./photo/sliders/emily-bernal-v9vII5gV8Lw-unsplash.jpg') no-repeat center center/cover;
 }
 
 /* Background overlay */
