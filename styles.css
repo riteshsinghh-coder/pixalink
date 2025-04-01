@@ -1,12 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #0a0a0a;
+    background: #0a0a0a; /* Dark background */
     color: white;
-    overflow-x: hidden;
+    text-align: center;
+    position: relative;
+  
+    box-shadow: inset 0 0 30px rgba(255, 77, 148, 0.3), inset 0 0 50px rgba(255, 184, 77, 0.3); /* Subtle glowing effect at the edges */
+}
+
+/* Header */
+header {
+    padding: 100px 20px;
+}
+
+/* Brighter Gradient Text with Increased Opacity */
+.gradient-text {
+    background: linear-gradient(45deg, rgba(255, 77, 148, 0.3), rgba(255, 184, 77, 0.3)); /* Increased opacity for stronger gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Button with Brighter Gradient and Increased Opacity */
+.btn {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, rgba(255, 77, 148, 0.3), rgba(255, 184, 77, 0.3)); /* Increased opacity for stronger gradient */
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 30px rgba(255, 0, 150, 0.5); /* Brighter and more opaque glow */
+    transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 50px auto;
+    border-radius: 15px;
+    max-width: 90%;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 20px;
+}
+
+.stat-item {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Glowing Elements */
+.glow-box {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 0, 150, 0.3);
+    box-shadow: 0 0 80px rgba(255, 0, 150, 0.8);
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: pulse 3s infinite alternate;
+}
+
+/* Glowing Positioning */
+.glow-box:nth-child(1) { top: 10%; left: 10%; }
+.glow-box:nth-child(2) { top: 20%; right: 10%; }
+.glow-box:nth-child(3) { bottom: 15%; left: 5%; }
+.glow-box:nth-child(4) { bottom: 10%; right: 5%; }
+
+/* Glowing Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    100% { transform: scale(1.5); opacity: 0.1; }
 }
 
 /* Navbar */
@@ -15,27 +95,37 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.3); /* Adjust opacity here (0.3 for less opacity) */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+}.header-dark {
+    background: rgba(0, 0, 0, 1); /* Darker background */
 }
+
 
 .logo img {
     height: 50px;
     width: auto;
 }
 
+/* General Navigation Styles */
+
 .nav-links {
     display: flex;
     list-style: none;
+    align-items: center; /* Vertically center all items */
+    justify-content: space-between; /* Distribute navigation items evenly */
+    flex-wrap: wrap; /* Allow elements to wrap in smaller screens */
 }
 
+/* Styling for each navigation item */
 .nav-links li {
     margin-left: 20px;
 }
 
+/* Link styling */
 .nav-links a {
     text-decoration: none;
     color: white;
@@ -43,27 +133,122 @@ header {
     transition: 0.3s;
 }
 
+/* Hover effect for links */
 .nav-links a:hover {
-    background: rgb(#584688 #D24195 #F27236);
+    transform: scale(0.95); /* Slightly zoom out the link */
+    transition: transform 0.3s ease;
 }
 
+/* Search Bar Container */
+.nav-links .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 20px; /* Space between Services and Search */
+}
+
+/* Search Input Styling */
+.nav-links .search-bar input {
+    padding: 8px 30px; /* Space for the icon inside */
+    font-size: 14px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background-color: #1e1e1e; /* Dark background */
+    color: white;
+    width: 200px; /* Adjust width as needed */
+    transition: width 0.3s ease-in-out; /* Smooth transition on focus */
+}
+
+/* On focus, expand the input */
+.nav-links .search-bar input:focus {
+    width: 250px; /* Increase width when focused */
+}
+
+/* Search Icon Styling */
+.nav-links .search-bar i {
+    position: absolute;
+    left: 10px; /* Positioning the icon inside input */
+    color: #aaa; /* Icon color */
+    font-size: 16px;
+    pointer-events: none; /* Prevent icon from blocking the input field */
+}
+
+/* Placeholder Text Styling */
+.nav-links .search-bar input::placeholder {
+    color: #aaa;
+}
+
+/* Hamburger Icon Styling (Mobile View) */
 .hamburger {
-    display: none;
+    display: none;                  /* Hide hamburger by default */
     font-size: 24px;
     cursor: pointer;
+    color: white;                   /* Set color to white */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    /* Collapse navigation items for smaller screens */
+    .nav-links {
+        display: none;               /* Hide navigation links on small screens */
+        width: 100%;                  /* Ensure full width */
+        flex-direction: column;       /* Stack items vertically */
+        align-items: flex-start;      /* Align items to the left */
+        background-color: #1e1e1e;    /* Maintain dark background */
+        padding: 20px 0;              /* Add padding for better spacing */
+    }
+
+    /* When the navigation is active, display it */
+    .nav-links.active {
+        display: flex;                /* Show navigation links when active */
+    }
+
+    /* Styling for each navigation item in mobile view */
+    .nav-links li {
+        margin-left: 0;               /* Remove left margin for mobile */
+        margin-bottom: 15px;          /* Add space between items */
+    }
+
+    .nav-links a {
+        font-size: 18px;              /* Increase font size for mobile */
+    }
+
+    /* Search bar input in mobile view */
+    .nav-links .search-bar input {
+        width: 100%;                  /* Make search input full-width on mobile */
+        margin-top: 10px;             /* Add some space between search bar and other items */
+    }
+
+    .hamburger {
+        display: block;               /* Show hamburger menu on small screens */
+    }
 }
 
 /* Hero Section */
 .hero {
+    position: relative; /* Ensures the pseudo-element is positioned correctly */
     text-align: center;
     padding: 190px 2px;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
     color: white;
     min-height: 23vh;
 }
-.titlebelow{
-color: white;
-font-weight: bolder;
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./photo/sliders/anon-hero-x2.webp') no-repeat center center/cover;
+    opacity: 0.5; /* Adjust opacity for the background image */
+    z-index: -1; /* Keeps the background image behind the text */
+}
+
+.titlebelow {
+    color: white;
+    font-weight: bolder;
 }
 
 .hero h1 {
@@ -73,19 +258,17 @@ font-weight: bolder;
 
 .hero p {
     font-size: 20px;
-    font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
     margin-top: 0; /* Removes space above p */
 }
-.titlehead{
+
+.titlehead {
     background: linear-gradient(135deg, #584688, #D24195, #F27236); 
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-
+    -webkit-text-fill-color: transparent;
 }
-
-
 
 .btn {
     padding: 10px 20px;
@@ -95,15 +278,10 @@ font-weight: bolder;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin-top: 10px; 
+    margin-top: 10px;
     border-radius: 50px; /* Fully rounded border */
-    border: 2px solid  #D24195; /* Base border thickness */
-    
-    background: 
-        linear-gradient(black, black) padding-box, /* Inner button background */;
-
-/* Gradient border */
-    
+    border: 2px solid #D24195; /* Base border thickness */
+    background: linear-gradient(black, black) padding-box; /* Inner button background */
     transition: 0.3s ease-in-out;
     position: relative; /* Required for proper centering */
 }
@@ -111,15 +289,9 @@ font-weight: bolder;
 .btn:hover {
     transform: scale(1.05); /* Slight scaling effect on hover */
     background: linear-gradient(135deg, #584688, #D24195, #F27236);
-    border:2px solid black
-
+    border: 2px solid black;
 }
 
-
-.btn:hover {
-    background:linear-gradient(135deg, #584688, #D24195, #F27236) 1;
-    transform: scale(1.05);
-}
 
 /* Services */
 .services, .portfolio, .contact {
@@ -131,6 +303,83 @@ font-weight: bolder;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+/* About Section */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background: #111;
+    color: white;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text .highlight {
+    background: linear-gradient(135deg, #584688, #D24195, #F27236); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #898989;
+}
+
+.about-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    width: 300px; /* Adjust as needed */
+}
+
+.about-image-grid img {
+    max-width: 100%; /* Ensures the images are responsive */
+    height: auto;    /* Maintains aspect ratio */
+    border-radius: 10px;
+}
+
+.about-image-grid img:nth-child(1) {
+    grid-column: span 2;
+}
+
+.about-image-grid img:nth-child(2),
+.about-image-grid img:nth-child(3) {
+    /* You can leave this as is or add specific size control */
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 300px;
+    }
 }
 
 .service {

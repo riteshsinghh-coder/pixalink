@@ -42,4 +42,33 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.style.display = "none";
         }
     });
+
+    // Header opacity change based on scroll position
+    const header = document.querySelector("header");
+    const aboutSection = document.getElementById("home");
+    let lastScrollTop = 0;
+
+    // Function to check if the "About Us" section is in the viewport
+    window.addEventListener("scroll", function () {
+        const aboutSectionTop = aboutSection.getBoundingClientRect().top;
+
+        // Scroll down behavior
+        if (aboutSectionTop <= 0) {
+            header.classList.add("header-dark");
+        } else {
+            header.classList.remove("header-dark");
+        }
+
+        // Scroll direction check
+        const currentScroll = window.scrollY;
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            header.classList.add("header-dark");
+        } else {
+            // Scrolling up
+            header.classList.remove("header-dark");
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+    });
 });
