@@ -21,24 +21,27 @@
             <img src="./photo/logo/Pixel-Ink-Logo (1).png" alt="Pixlink Logo">
         </div>
         <nav>
+           
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About us</a></li>
                 <li><a href="#experience">Blog</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#services">Services</a></li>
-            
+                
                 <!-- Search Bar with Icon -->
-                <li class="search-bar">
-                    <input type="text" placeholder="Search...">
-                    <i class="fas fa-search"></i> <!-- Font Awesome Search Icon -->
-                </li>
-            
-                <li><a href="#contact">Contact</a></li>
+                <div class="nav-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i> <!-- Font Awesome Search Icon -->
+                    </div>
+                    <li><a href="#contact">Contact</a></li>
+                </div>
             </ul>
-            
+        
             <div class="hamburger">☰</div>
         </nav>
+        
     </header>
    
     
@@ -74,24 +77,29 @@
 </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
-        <h2 data-aos="fade-right">Expert Graphic Design Services</h2>
-        <p>We create high-quality visuals that leave a lasting impression. Explore our services:</p>
-        <div class="service-container">
-            <div class="service" data-aos="zoom-in">
-                <h3>Brand Identity & Logo Design</h3>
-                <p>Get a professional, memorable logo and a strong brand identity tailored for your business.</p>
-            </div>
-            <div class="service" data-aos="zoom-in" data-aos-delay="200">
-                <h3>Web & UI/UX Design</h3>
-                <p>Modern, responsive websites and intuitive UI/UX designs to enhance user experience.</p>
-            </div>
-            <div class="service" data-aos="zoom-in" data-aos-delay="400">
-                <h3>Social Media Graphics</h3>
-                <p>Custom social media posts, banners, and ads to boost engagement and brand recognition.</p>
-            </div>
+<section id="services" class="services">
+    <div class="service-container">
+        <div class="service-box" data-aos="fade-up">
+            <h2>5M+</h2>
+            <p>Customers</p>
         </div>
-    </section>
+        <div class="service-box" data-aos="fade-up" data-aos-delay="200">
+            <h2>450M+</h2>
+            <p>Coverage</p>
+        </div>
+        <div class="service-box" data-aos="fade-up" data-aos-delay="400">
+            <h2>22%</h2>
+            <p>Earning</p>
+        </div>
+        <div class="service-box" data-aos="fade-up" data-aos-delay="600">
+            <h2>8.03%</h2>
+            <p>Interest</p>
+        </div>
+    </div>
+</section>
+
+
+
 
     <!-- Portfolio Section (Black Background) -->
     <section id="portfolio" class="portfolio" style=" color: white;">
@@ -117,6 +125,35 @@
             <p>✔ Specialized in Branding, UI/UX & Digital Marketing Graphics</p>
         </div>
     </section>
+
+    <!-- Testimonial Section -->
+<section id="testimonials" class="testimonials">
+    <h2 data-aos="fade-up">Client says about us</h2>
+    <div class="testimonial-container">
+        <div class="testimonial-card" data-aos="fade-right">
+            <div class="testimonial-image">
+                <img src="photo/testimonials/client1.jpg" alt="Client 1">
+            </div>
+            <div class="testimonial-content">
+                <h3>Rekha Varadwaz <span>/ CEO at Google Inc</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+            </div>
+            <i class="fas fa-quote-right"></i>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-left">
+            <div class="testimonial-image">
+                <img src="photo/testimonials/client2.jpg" alt="Client 2">
+            </div>
+            <div class="testimonial-content">
+                <h3>Paresh Rawal <span>/ Manager at Nike Inc</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+            </div>
+            <i class="fas fa-quote-right"></i>
+        </div>
+    </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
