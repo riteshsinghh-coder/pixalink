@@ -42,22 +42,9 @@ header {
 }
 
 /* Button with Brighter Gradient and Increased Opacity */
-.btn {
-    padding: 12px 24px;
-    background: linear-gradient(45deg, rgba(255, 77, 148, 0.3), rgba(255, 184, 77, 0.3)); /* Increased opacity for stronger gradient */
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
-.btn:hover {
-    box-shadow: 0px 0px 30px rgba(255, 0, 150, 0.5); /* Brighter and more opaque glow */
-    transform: scale(1.05);
-}
+
+
 
 
 
@@ -192,7 +179,9 @@ header {
   
   .btn-outline:hover {
     background: #fff;
-    color: #0d0f12;
+   
+    
+
   }
   
   .icon {
@@ -287,49 +276,9 @@ header {
         gap: 10px;
     }
 
-    .search-bar input {
-        width: 150px; /* Reduce input width for smaller screens */
-    }
-
-    .search-bar input:focus {
-        width: 180px; /* Expand slightly on focus */
-    }
+  
 }
 
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.search-bar input {
-    padding: 8px 30px;
-    font-size: 14px;
-    border: none;
-    border-radius: 30px;
-    background-color: #1e1e1e;
-    color: white;
-    width: 200px;
-    transition: width 0.3s ease-in-out;
-    outline: none;
-}
-
-.search-bar input:focus {
-    width: 250px;
-}
-
-.search-bar i {
-    position: absolute;
-    left: 10px;
-    color: #aaa;
-    font-size: 16px;
-    pointer-events: none;
-}
-
-.search-bar input::placeholder {
-    color: #aaa;
-}
 
 
 /* Navigation links */
@@ -366,39 +315,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    margin-left: 20px; /* Space between Services and Search */
-}
-
-/* Search Input Styling */
-.nav-links .search-bar input {
-    padding: 8px 30px; /* Space for the icon inside */
-    font-size: 14px;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    background-color: #1e1e1e; /* Dark background */
-    color: white;
-    width: 200px; /* Adjust width as needed */
-    transition: width 0.3s ease-in-out; /* Smooth transition on focus */
-}
-
-/* On focus, expand the input */
-.nav-links .search-bar input:focus {
-    width: 250px; /* Increase width when focused */
-}
-
-/* Search Icon Styling */
-.nav-links .search-bar i {
-    position: absolute;
-    left: 10px; /* Positioning the icon inside input */
-    color: #aaa; /* Icon color */
-    font-size: 16px;
-    pointer-events: none; /* Prevent icon from blocking the input field */
-}
-
-/* Placeholder Text Styling */
-.nav-links .search-bar input::placeholder {
-    color: #aaa;
+    margin-left: 20px; 
 }
 
 /* Hamburger Icon Styling (Mobile View) */
@@ -494,7 +411,7 @@ header {
 .btn:hover {
     transform: scale(1.05); /* Slight scaling effect on hover */
     background: linear-gradient(135deg, #584688, #D24195, #F27236);
-    border: 2px solid black;
+    border: none;
 }
 
 
@@ -577,6 +494,42 @@ header {
     }
 }
 
+.about-image-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .about-image-layout img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .right-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Responsive (optional) */
+  @media (max-width: 768px) {
+    .about-image-layout {
+      flex-direction: column;
+    }
+  
+    .right-images {
+      flex-direction: row;
+    }
+  
+    .about-image-layout img {
+      width: 100px;
+      height: auto;
+    }
+  }
+  
 
 /* Portfolio */
 .portfolio-gallery {
@@ -1079,5 +1032,59 @@ h2::after {
     margin-left: 20px;
     text-decoration: none;
     font-size: 12px;
+  }
+
+.reach-us-section {
+    padding: 34px 0px 60px 0px;
+    /* border-radius: 16px; */
+  
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
+  .reach-us-container {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+
+  }
+  
+  .reach-us-container h2 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .reach-us-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .reach-us-buttons button {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .reach-us-buttons button:hover {
+    /* background-color: white; */
+    color: white;
   }
   
