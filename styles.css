@@ -786,8 +786,7 @@ h2::after {
 
 /* Portfolio Item */
 .portfolio-item {
-    width: 190px;
-    height: 82px;
+ 
     cursor: pointer;
     overflow: hidden;
     display: flex;
@@ -799,8 +798,7 @@ h2::after {
 }
 
 .portfolio-image {
-    width: 220px;
-    height: 120px;
+
     background-color: white;
     display: flex; /* Enables flexbox */
     align-items: center; /* Centers vertically */
@@ -814,10 +812,6 @@ h2::after {
     transform: scale(1.05);
     opacity: 1;
 }
-
-
-
-
 
 
 /* Modal Styling */
