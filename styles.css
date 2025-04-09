@@ -310,6 +310,7 @@ header {
     transition: transform 0.3s ease;
 }
 
+
 /* Search Bar Container */
 .nav-links .search-bar {
     display: flex;
@@ -1034,11 +1035,13 @@ h2::after {
     font-size: 12px;
   }
 
-.reach-us-section {
+  .reach-us-section {
     padding: 34px 0px 60px 0px;
-    /* border-radius: 16px; */
-  
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1)
+      ),
+      url('./photo/sliders/—Pngtree—illustrated\ 3d\ concept\ of\ a_6298119.jpg') no-repeat center center / cover;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -1049,6 +1052,7 @@ h2::after {
     align-items: center;
     flex-direction: column;
   }
+  
   
   
   .reach-us-container {
