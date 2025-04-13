@@ -31,10 +31,11 @@
           <li><a href="#experience">Blog</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#services">Services</a></li>
+          <li class="mobile-contact"><a href="#contact">Contact</a></li>
         </ul>
     
-        <div class="nav-right">
-          <a href="#contact" class="contact-btn">Contact</a>
+        <div class="nav-right desktop-contact">
+          <a href="#contact" class="contact-btn">Contact</a> <!-- Only visible on desktop -->
         </div>
       </nav>
     </header>
@@ -151,7 +152,7 @@
       <div class="card-inner">
         <div class="card-front">
           <img src="./photo/sliders/branding.png" alt="Retail Icon" class="icon" />
-          <h3>Retail</h3>
+          <h3>Branding</h3>
         </div>
         <div class="card-back">
           <h3>Hello</h3>
@@ -163,7 +164,7 @@
       <div class="card-inner">
         <div class="card-front">
           <img src="./photo/sliders/visual-graphic.png" alt="Healthcare Icon" class="icon" />
-          <h3>Healthcare</h3>
+          <h3>Graphics</h3>
         </div>
         <div class="card-back">
           <h3>Hello</h3>
@@ -175,7 +176,7 @@
       <div class="card-inner">
         <div class="card-front">
           <img src="./photo/sliders/spaces.png" alt="Education Icon" class="icon" />
-          <h3>Education</h3>
+          <h3>Stationary</h3>
         </div>
         <div class="card-back">
           <h3>Hello</h3>
@@ -187,7 +188,7 @@
       <div class="card-inner">
         <div class="card-front">
           <img src="./photo/sliders/stationary.png" alt="Food & Beverage Icon" class="icon" />
-          <h3>Food & Beverage</h3>
+          <h3>Prints</h3>
         </div>
         <div class="card-back">
           <h3>Hello</h3>
@@ -199,7 +200,7 @@
       <div class="card-inner">
         <div class="card-front">
           <img src="./photo/sliders/illustration-icon.png" alt="Real Estate Icon" class="icon" />
-          <h3>Real Estate</h3>
+          <h3>Apps</h3>
         </div>
         <div class="card-back">
           <h3>Hello</h3>
@@ -211,7 +212,7 @@
       <div class="card-inner">
         <div class="card-front">
           <img src="./photo/sliders/illustration-icon.png" alt="Automotive Icon" class="icon" />
-          <h3>Automotive</h3>
+          <h3>Spaces </h3>
         </div>
         <div class="card-back">
           <h3>Hello</h3>
@@ -223,7 +224,7 @@
       <div class="card-inner">
         <div class="card-front">
           <img src="./photo/sliders/product-packaging.png" alt="Manufacturing Icon" class="icon" />
-          <h3>Manufacturing</h3>
+          <h3>Videos</h3>
         </div>
         <div class="card-back">
           <h3>Hello</h3>
@@ -235,7 +236,7 @@
       <div class="card-inner">
         <div class="card-front">
           <img src="./photo/sliders/web-and-mobile-app-design-icon.png" alt="Technology Icon" class="icon" />
-          <h3>Technology</h3>
+          <h3>Mailer</h3>
         </div>
         <div class="card-back">
           <h3>Hello</h3>
@@ -247,7 +248,7 @@
       <div class="card-inner">
         <div class="card-front">
           <img src="./photo/sliders/customized-party-supplies.png" alt="Marketing Icon" class="icon" />
-          <h3>Marketing</h3>
+          <h3>Customized Party Supplier</h3>
         </div>
         <div class="card-back">
           <h3>Hello</h3>
@@ -282,7 +283,7 @@
             <img src="./photo/sliders/testimonial-Dummy.webp" alt="Client 1" />
           </div>
           <div class="testimonial-content">
-            <h3>Rekha Varadwaz <span>/ CEO at Google Inc</span></h3>
+            <h3>Packaging <span>/ CEO at Google Inc</span></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
           </div>
           <i class="fas fa-quote-right"></i>
@@ -293,7 +294,7 @@
             <img src="./photo/sliders/testimonial-Dummy.webp" alt="Client 2" />
           </div>
           <div class="testimonial-content">
-            <h3>Paresh Rawal <span>/ Manager at Nike Inc</span></h3>
+            <h3> Illustrations <span>/ Manager at Nike Inc</span></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
           </div>
           <i class="fas fa-quote-right"></i>
@@ -347,10 +348,19 @@
      <textarea name="message" placeholder="Tell us about your project" required
        style="padding: 12px; background: transparent; border: 1px solid #444; color: white; height: 100px;"></textarea>
      
-     <button type="submit" class="btn"
-       style="padding: 12px 20px; background: #f7a6b8; border: none; color: white; font-weight: bold; text-transform: uppercase; cursor: pointer;">
+       <button type="submit" class="btn"
+       style="padding: 12px 20px; 
+              border: none; 
+              color: white; 
+              font-weight: bold; 
+              text-transform: uppercase; 
+              cursor: pointer; 
+              background: linear-gradient(135deg, #584688, #D24195, #F27236); 
+              border-radius: 8px;
+              transition: all 0.3s ease;">
        Request a Consultation
      </button>
+     
    </form>
  </section>
 
@@ -377,7 +387,7 @@
     </p>
     <form class="subscribe-form" style="display: flex; gap: 10px;">
       <input type="email" placeholder="YOUR E-MAIL" required style="padding: 10px; flex: 1; border: none; border-radius: 5px;">
-      <button type="submit" style="padding: 10px 16px; background: #f7a6b8; border: none; border-radius: 5px; color: white; cursor: pointer;">
+      <button type="submit" style="padding: 10px 16px; background: linear-gradient(135deg, #584688, #D24195, #F27236); ; border: none; border-radius: 5px; color: white; cursor: pointer;">
         SUBSCRIBE
       </button>
     </form>
