@@ -317,11 +317,19 @@ header {
     justify-content: center; /* Align items to the left */
     gap: 20px; /* Space between navigation items */
     flex-grow: 1; /* Allow nav items to take remaining space */
+    
 }
 
+
+.contact-btn{
+  position: relative;
+  left:-32px;
+
+}
 /* Styling for each navigation item */
 .nav-links li {
     margin-left: 20px;
+
 }
 
 /* Link styling */
