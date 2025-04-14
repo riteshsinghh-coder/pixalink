@@ -114,13 +114,13 @@ header {
 /* SERVICES SECTION BASE STYLES */
 .services-section {
   background-color: #0d0f12;
-  padding: 2rem 4rem;
+  padding: 20px 20px 40px 20px;
   color: #fff;
   text-align: center;
 }
 
 .section-title {
-  margin-bottom: 3rem;
+ 
  
   font-weight: bold;
   color: white;
@@ -205,8 +205,9 @@ header {
 
 /* INDUSTRIES SECTION (optional context) */
 .industries-section {
+  padding:20px 20px 47px 20px;
   background: #111;
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
   text-align: center;
 }
 
@@ -618,7 +619,7 @@ header {
 
 /* About Section */
 .about {
-    padding: 60px 20px;
+    padding: 20px 20px 35px 20px;
     text-align: center;
     background: #111;
     color: white;
@@ -915,21 +916,6 @@ header {
         width: 90%;
     }
 }
-/* Portfolio Container */
-.portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Portfolio Container */
-.portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
 
 
 /* Portfolio Container with Background Image */
@@ -938,11 +924,12 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    padding: 50px 20px;
    
-    position: relative;
+   
+    
 }
 .portfolio {
+  padding:20px 20px 40px 20px;
     position: relative;
     background: url('./photo/sliders/emily-bernal-v9vII5gV8Lw-unsplash.jpg') no-repeat center center/cover;
 }
@@ -1050,7 +1037,7 @@ h2::after {
 
 .testimonials {
   text-align: center;
-  padding: 60px 20px;
+  padding:20px 20px 47px 20px;
   background: #0d0f12; /* Black background */
 }
 
@@ -1272,7 +1259,7 @@ h2::after {
   }
 
   .reach-us-section {
-    padding: 34px 0px 60px 0px;
+    padding:20px 20px 47px 20px;
     background: linear-gradient(
         rgba(255, 255, 255, 0.1),
         rgba(255, 255, 255, 0.1)
