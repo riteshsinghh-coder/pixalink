@@ -15,6 +15,8 @@ nav {
     position: relative;
     left: -10px; /* Adjust this value to move it further left */
 }
+
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -32,6 +34,18 @@ header {
     padding: 100px 20px;
 }
 
+header {
+  background-color: #000;
+  padding: 10px 20px;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 /* Brighter Gradient Text with Increased Opacity */
 .gradient-text {
     background: linear-gradient(45deg, rgba(255, 77, 148, 0.3), rgba(255, 184, 77, 0.3)); /* Increased opacity for stronger gradient */
@@ -370,6 +384,14 @@ header {
     font-size: 1rem;
     margin: 0;
   }
+  .navbar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 20px;
+    position: relative;
+  }
   
 /* Logo */
 .logo {
@@ -400,29 +422,36 @@ header {
 
 /* Navigation links */
 .nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center; /* Vertically center all items */
-    justify-content: center; /* Align items to the left */
-    gap: 20px; /* Space between navigation items */
-    flex-grow: 1; /* Allow nav items to take remaining space */
-    
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;          /* Center nav container itself */
 }
+
 
 
 .contact-btn {
   padding: 8px 18px;
   border: 2px solid transparent;
-  background:
-    linear-gradient(#000, #000) padding-box,
-    linear-gradient(135deg, #584688, #D24195, #F27236) border-box;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(135deg, #584688, #D24195, #F27236) border-box;
   color: white;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
-  position:relative;
-  left:-32px;
+  position: relative;
+  left: -24px;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(135deg, #584688, #D24195, #F27236) border-box,
+              linear-gradient(#000, #000) padding-box;
+  color: white;
 }
 
 .contact-btn:hover {
@@ -439,15 +468,15 @@ header {
 }
 
 /* Link styling */
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    transition: 0.3s;
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: transform 0.3s ease;
 }
 
 /* Hover effect for links */
-.nav-links a:hover {
+.nav-links li a:hover {
     transform: scale(0.95); /* Slightly zoom out the link */
     transition: transform 0.3s ease;
 }
@@ -543,77 +572,136 @@ header {
     .hamburger {
         display: block;
     }
-}
-
-
-
-/* Hero Section */
+}/* Hero Section */
 .hero {
-    position: relative; /* Ensures the pseudo-element is positioned correctly */
-    text-align: center;
-    padding: 190px 2px;
-    color: white;
-    min-height: 23vh;
+  position: relative;
+  text-align: center;
+  padding: 150px 10px; /* Reduced the left and right padding */
+  color: white;
+  min-height: 70vh; /* Adjusted for better visual impact */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: no-repeat center center;
+  background-size: cover; /* Ensures the background image scales down */
+  background-position: center center; /* Keeps the image centered */
 }
 
+/* Responsive background image that shrinks with screen size */
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   
-    opacity: 0.5; /* Adjust opacity for the background image */
-    z-index: -1; /* Keeps the background image behind the text */
-    background: var(--hero-bg) no-repeat center center/cover;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--hero-bg) no-repeat center center;
+  background-size: cover; /* Ensures the image scales down */
+  background-position: center center; /* Keeps the image centered */
+  opacity: 0.5;
+  z-index: -1;
+  transition: background-size 0.3s ease-in-out, background-position 0.3s ease-in-out;
 }
 
-.titlebelow {
-    color: white;
-    font-weight: bolder;
-}
-
-.hero h1 {
-    font-size: 32px;
-    margin-bottom: 10px; /* Removes space below h1 */
-}
-
-.hero p {
-    font-size: 20px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    margin-top: 0; /* Removes space above p */
-}
-
+/* Gradient text */
 .titlehead {
-    background: linear-gradient(135deg, #584688, #D24195, #F27236); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #584688, #D24195, #F27236); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* Subheading */
+.titlebelow {
+  color: white;
+  font-weight: bolder;
+}
+
+/* Heading styles */
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph styles */
+.hero p {
+  font-size: 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  margin-top: 0;
+}
+
+/* Call to Action Button */
 .btn {
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 16px;
-    color: white; /* Ensure text is visible */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    border-radius: 50px; /* Fully rounded border */
-    border: 2px solid #D24195; /* Base border thickness */
-    background: linear-gradient(black, black) padding-box; /* Inner button background */
-    transition: 0.3s ease-in-out;
-    position: relative; /* Required for proper centering */
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 50px;
+  border: 2px solid #D24195;
+  background: linear-gradient(black, black) padding-box;
+  transition: 0.3s ease-in-out;
+  position: relative;
 }
 
 .btn:hover {
-    transform: scale(1.05); /* Slight scaling effect on hover */
-    background: linear-gradient(135deg, #584688, #D24195, #F27236);
-    border: none;
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #584688, #D24195, #F27236);
+  border: none;
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+      padding: 100px 16px; /* Adjusted padding for tablet */
+      min-height: 65vh;
+      background-size: contain;
+      background-position: center;
+  }
+
+  .hero h1 {
+      font-size: 26px;
+  }
+
+  .hero p {
+      font-size: 16px;
+  }
+
+  .btn {
+      font-size: 14px;
+      padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+      padding: 80px 10px; /* Reduced padding on mobile */
+      min-height: 60vh;
+      background-size: contain;
+      background-position: center;
+  }
+
+  .hero h1 {
+      font-size: 22px;
+  }
+
+  .hero p {
+      font-size: 14px;
+  }
+
+  .btn {
+      font-size: 13px;
+      padding: 7px 16px;
+  }
+}
+
+
 
 
 
@@ -933,6 +1021,9 @@ header {
     position: relative;
     background: url('./photo/sliders/emily-bernal-v9vII5gV8Lw-unsplash.jpg') no-repeat center center/cover;
 }
+/* .portfolio h2{
+  margin-bottom: 20px;
+} */
 
 /* Background overlay */
 .portfolio::before {
@@ -1426,4 +1517,36 @@ h2::after {
     align-items: flex-start;
     gap: 10px;
   }
+}/* Styling specifically for the Graphics card-back */
+
+
+/* Title styling */
+.card-back.graphics-back .graphics-title {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* List styling */
+.card-back.graphics-back .graphics-list {
+  list-style-type: disc;
+  padding-left: 53px;        /* Reset default list padding */
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.card-back.graphics-back .graphics-list li {
+     /* Inner padding for each list item */
+  margin-bottom: 6px;
+  color: #ffffff;
+  position: relative;
+}
+
+
+.card-back.graphics-back .graphics-list li {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 6px;
 }

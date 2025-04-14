@@ -20,11 +20,13 @@
 <body>
     <!-- Navbar -->
     <header>
+      
       <div class="logo">
         <img src="./photo/logo/Pixel-Ink-Logo (1).png" alt="Pixlink Logo" />
       </div>
     
       <nav class="navbar">
+        <div class="nav-container">
         <div class="hamburger" onclick="toggleMenu()">☰</div>
     
         <ul class="nav-links" id="navLinks">
@@ -35,11 +37,13 @@
           <li><a href="#services">Services</a></li>
           <li class="mobile-contact"><a href="#contact">Contact</a></li>
         </ul>
+      </div>
     
         <div class="nav-right desktop-contact">
           <a href="#contact" class="contact-btn">Contact</a> <!-- Only visible on desktop -->
         </div>
       </nav>
+    </div>
     </header>
     
     
@@ -128,7 +132,7 @@
 
     <!-- Portfolio Section (Black Background) -->
     <section id="portfolio" class="portfolio" style=" color: white;">
-        <h2 data-aos="fade-right">Our Work</h2>
+        <h2 data-aos="fade-right" class="section-title">Our Work</h2>
         <div class="portfolio-container">
             <div class="portfolio-image"><img src="./photo/sliders/DT-1.jpg" class="portfolio-item" onclick="openModal(this)" alt="Creative Design 1"></div>
             
@@ -156,8 +160,14 @@
           <img src="./photo/sliders/branding.png" alt="Retail Icon" class="icon" />
           <h3>Branding</h3>
         </div>
-        <div class="card-back">
-          <h3>Hello</h3>
+        <div class="card-back graphics-back">
+          <h3 class="graphics-title">Branding</h3>
+          <ul class="graphics-list">
+            <li>Logo</li>
+            <li>Identities</li>
+            <li>Typography</li>
+            <li>Color Schemes</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -168,9 +178,17 @@
           <img src="./photo/sliders/visual-graphic.png" alt="Healthcare Icon" class="icon" />
           <h3>Graphics</h3>
         </div>
-        <div class="card-back">
-          <h3>Hello</h3>
+        <div class="card-back graphics-back">
+          <h3 class="graphics-title">Graphics</h3>
+          <ul class="graphics-list">
+            <li>Banners</li>
+            <li>Social Media Creatives</li>
+            <li>Infographics</li>
+            <li>Gif</li>
+          </ul>
         </div>
+        
+        
       </div>
     </div>
     <div class="industry-card" data-aos="zoom-in" data-aos-delay="100">
@@ -179,8 +197,21 @@
           <img src="./photo/sliders/print-media (1).png" alt="Healthcare Icon" class="icon" />
           <h3>Print Media</h3>
         </div>
-        <div class="card-back">
-          <h3>Hello</h3>
+        <div class="card-back graphics-back">
+          <h3 class="graphics-title"> Print Media</h3>
+          <ul class="graphics-list">
+            <li>Brochures</li>
+            <li>Advertisements</li>
+            <li>Magazine Cover</li>
+            <li>ProDuct Catalog</li>
+            <li>Business Card</li>
+            <li>Letter Heads</li>
+         
+            <li>Invitation</li>
+         
+            <li>Calender</li>
+        
+          </ul>
         </div>
       </div>
     </div>
@@ -191,8 +222,17 @@
           <img src="./photo/sliders/spaces.png" alt="Education Icon" class="icon" />
           <h3>Spaces</h3>
         </div>
-        <div class="card-back">
-          <h3>Hello</h3>
+        <div class="card-back graphics-back">
+          <h3 class="graphics-title">Spaces</h3>
+          <ul class="graphics-list">
+            <li>Exibition Boths/Stals</li>
+            <li>Canopy</li>
+         
+            <li>Digital Displays</li>
+         
+  
+        
+          </ul>
         </div>
       </div>
     </div>
@@ -203,8 +243,18 @@
           <img src="./photo/sliders/stationary.png" alt="Food & Beverage Icon" class="icon" />
           <h3>Stationary</h3>
         </div>
-        <div class="card-back">
-          <h3>Hello</h3>
+        <div class="card-back graphics-back">
+          <h3 class="graphics-title"> Stationary</h3>
+          <ul class="graphics-list">
+           
+            <li>Business Card</li>
+            <li>Letter Heads</li>
+         
+            <li>Invitation</li>
+         
+            <li>Calender</li>
+        
+          </ul>
         </div>
       </div>
     </div>
@@ -215,8 +265,13 @@
           <img src="./photo/sliders/mailer.png" alt="Real Estate Icon" class="icon" />
           <h3>Malier</h3>
         </div>
-        <div class="card-back">
-          <h3>Hello</h3>
+        <div class="card-back graphics-back">
+          <h3 class="graphics-title"> Mailer</h3>
+          <ul class="graphics-list">
+            <li>Customized Malier Layouts</li>
+           
+        
+          </ul>
         </div>
       </div>
     </div>
@@ -227,8 +282,14 @@
           <img src="./photo/sliders/illustration-icon.png" alt="Automotive Icon" class="icon" />
           <h3>Illustrations</h3>
         </div>
-        <div class="card-back">
-          <h3>Hello</h3>
+        <div class="card-back graphics-back">
+          <h3 class="graphics-title">Illustrations</h3>
+          <ul class="graphics-list">
+            <li>Iconography</li>
+            <li>Patterns</li>
+            
+        
+          </ul>
         </div>
       </div>
     </div>
@@ -239,8 +300,14 @@
           <img src="./photo/sliders/product-packaging.png" alt="Manufacturing Icon" class="icon" />
           <h3>Packaging</h3>
         </div>
-        <div class="card-back">
-          <h3>Hello</h3>
+        <div class="card-back graphics-back">
+          <h3 class="graphics-title"> Packaging</h3>
+          <ul class="graphics-list">
+            <li>Products</li>
+            <li>Food Bags & Boxes</li>
+  
+        
+          </ul>
         </div>
       </div>
     </div>
@@ -251,8 +318,16 @@
           <img src="./photo/sliders/web-and-mobile-app-design-icon.png" alt="Technology Icon" class="icon" />
           <h3>App & Web layout</h3>
         </div>
-        <div class="card-back">
-          <h3>Hello</h3>
+        <div class="card-back graphics-back">
+          <h3 class="graphics-title"> App & Web layout</h3>
+          <ul class="graphics-list">
+            <li>UI Design</li>
+            <li>User Experience</li>
+            <li>Layout Design</li>
+            <li>Prototype</li>
+           
+        
+          </ul>
         </div>
       </div>
     </div>
@@ -263,8 +338,16 @@
           <img src="./photo/sliders/customized-party-supplies.png" alt="Marketing Icon" class="icon" />
           <h3>Customized Party Supplier</h3>
         </div>
-        <div class="card-back">
-          <h3>Hello</h3>
+        <div class="card-back graphics-back">
+          <h3 class="graphics-title"> App & Web layout</h3>
+          <ul class="graphics-list">
+            <li>Buntings</li>
+            <li>Props & Hats</li>
+            <li>Invitations</li>
+            <li>Photo Booth Props</li>
+           
+        
+          </ul>
         </div>
       </div>
     </div>
