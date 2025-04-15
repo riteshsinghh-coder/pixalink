@@ -391,68 +391,56 @@
         </div>
       </div>
     </section>
-   <!-- Get in Touch Section -->
-   <section style="
-   background: url('./photo/sliders/ChatGPT%20Image%20Apr%209,%202025,%2004_19_18%20PM.png') center/cover no-repeat, #1e1c26;
-   width: 100%;
-   padding: 50px 20px;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: flex-start;
-   color: white;
-   gap: 30px;
-   box-sizing: border-box;
- ">
- 
-   <!-- Left Text Component -->
-   <div style="flex: 1 1 300px; max-width: 500px;">
-     <h2 data-aos="fade-up" style="font-size: 28px; font-weight: 600; margin-bottom: 16px;">Get in Touch</h2>
-     <p style="font-size: 15px; line-height: 1.6; color: #ccc;">
-       We'd love to hear about your project. Fill out the form and we’ll get back to you shortly.
-     </p>
-   </div>
- 
-   <!-- Form Component -->
-   <form id="enquiry-form" data-aos="fade-up" data-aos-delay="200"
-     style="
-       flex: 1 1 300px;
-       max-width: 500px;
-       background: rgba(30, 28, 38, 0.85);
-       padding: 30px;
-       border-radius: 10px;
-       display: flex;
-       flex-direction: column;
-       gap: 12px;
-     ">
-     
-     <input type="text" name="from_name" placeholder="Your Name" required
-       style="padding: 12px; background: transparent; border: 1px solid #444; color: white;">
-     
-     <input type="email" name="reply_to" placeholder="Your Email" required
-       style="padding: 12px; background: transparent; border: 1px solid #444; color: white;">
-     
-     <input type="tel" name="phone" placeholder="Your Phone Number" required
-       style="padding: 12px; background: transparent; border: 1px solid #444; color: white;">
-     
-     <textarea name="message" placeholder="Tell us about your project" required
-       style="padding: 12px; background: transparent; border: 1px solid #444; color: white; height: 100px;"></textarea>
-     
-       <button type="submit" class="btn"
-       style="padding: 12px 20px; 
-              border: none; 
-              color: white; 
-              font-weight: bold; 
-              text-transform: uppercase; 
-              cursor: pointer; 
-              background: linear-gradient(135deg, #584688, #D24195, #F27236); 
-              border-radius: 8px;
-              transition: all 0.3s ease;">
-       Request a Consultation
-     </button>
-     
-   </form>
- </section>
+   <!-- Desktop Version -->
+<section class="contact-section desktop-contact">
+  <!-- Left Text Component -->
+  <div class="contact-text">
+    <h2 data-aos="fade-up">Get in Touch</h2>
+    <p>We'd love to hear about your project. Fill out the form and we’ll get back to you shortly.</p>
+  </div>
+
+  <!-- Form Component -->
+  <form class="contact-form" id="enquiry-form" data-aos="fade-up" data-aos-delay="200">
+    <input type="text" name="from_name" placeholder="Your Name" required>
+    <input type="email" name="reply_to" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+    <textarea name="message" placeholder="Tell us about your project" required></textarea>
+    <button type="submit" class="btn">Request a Consultation</button>
+  </form>
+</section>
+
+<!-- Mobile Version -->
+<section class="mobile-contact">
+  <!-- Left Text Component -->
+  <div style="
+    text-align: center;
+    margin-bottom: 20px;
+  ">
+    <h2 data-aos="fade-up" style="font-size: 24px; font-weight: 600;">Get in Touch</h2>
+    <p style="font-size: 14px; line-height: 1.6; color: #ccc; max-width: 90%; margin: 0 auto;">
+      We'd love to hear about your project. Fill out the form and we’ll get back to you shortly.
+    </p>
+  </div>
+
+  <!-- Form Component -->
+  <form id="enquiry-form" data-aos="fade-up" data-aos-delay="200" style="
+    background: rgba(30, 28, 38, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    width: 100%;
+  ">
+    <input type="text" name="from_name" placeholder="Your Name" required>
+    <input type="email" name="reply_to" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+    <textarea name="message" placeholder="Tell us about your project" required></textarea>
+    <button type="submit" class="btn">Request a Consultation</button>
+  </form>
+</section>
+
 
 <!-- Status Message -->
 <p id="status-message" style="color: white; text-align: center; margin-top: 20px;"></p>
@@ -462,7 +450,7 @@
     
     <!-- Brand Info -->
     <div class="footer-brand">
-      <h2>Pixelink</h2>
+      <img src="./photo/logo/Pixel-Ink-Logo (1).png" alt="Pixelink Logo" style="width: 105px; height: auto;">
       <p>
         PixINK creates compelling branding, graphic design, UI/UX, <br>
         and web visuals that elevate brands and engage audiences.
@@ -482,7 +470,7 @@
 
     <!-- Contact & Social -->
     <div class="footer-contact">
-      <div class="social">
+      <div class="social ">
         <p>FOLLOW US</p>
         <div class="social-icons">
           <i class="fab fa-x-twitter"></i>

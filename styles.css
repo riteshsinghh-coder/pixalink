@@ -890,24 +890,127 @@ header {
   
   #enquiry-form textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 50px;
   }
-  
   #enquiry-form .btn {
-    background: orange;
-    color: black;
+    background: linear-gradient(135deg, #584688, #D24195, #F27236); /* Peach gradient */
+    color: color;
     font-weight: bold;
     border: none;
     padding: 12px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
   }
   
   #enquiry-form .btn:hover {
-    background: #ff9900;
+    background: linear-gradient(135deg, #584688, #D24195, #F27236); /* Lighter gradient on hover */
   }
   
+  
+
+  /* === Desktop Version Styles === */
+.contact-section {
+  background: linear-gradient(#1e1c26cc, #1e1c26cc), url('./photo/sliders/ChatGPT%20Image%20Apr%209,%202025,%2004_19_18%20PM.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 30px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.contact-text {
+  flex: 1 1 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.contact-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.contact-form {
+  flex: 1 1 300px;
+  max-width: 500px;
+  background: rgba(30, 28, 38, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  background: #161a20;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form .btn {
+  background: linear-gradient(135deg, #584688, #D24195, #F27236);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.contact-form .btn:hover {
+  background: linear-gradient(135deg, #F27236, #D24195, #584688);
+}
+
+/* === Responsive Toggle === */
+.mobile-contact {
+  display: none;
+  background: linear-gradient(#1e1c26cc, #1e1c26cc), url('./photo/sliders/ChatGPT%20Image%20Apr%209,%202025,%2004_19_18%20PM.png') no-repeat center center;
+  background-size: cover;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Show mobile layout only on small screens */
+@media (max-width: 767px) {
+  .desktop-contact {
+    display: none !important;
+  }
+
+  .mobile-contact {
+    display: block !important;
+  }
+}
 
 /* Image Slider */
 .slider {
@@ -1199,17 +1302,16 @@ h2::after {
   line-height: 1.5;
 }
 
-.testimonial-card i {
-  font-size: 24px;
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  background: linear-gradient(90deg, #584688, #D24195, #F27236);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+
+  .testimonial-card i {
+    font-size: 24px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: orangered;
+  }
+  
   /* color: transparent; */
-}
 
 
 @media (max-width: 768px) {
@@ -1218,199 +1320,6 @@ h2::after {
     align-items: center;
   }
 }
-
-.footer {
-    background: #1e1c26;
-    color: white;
-    padding: 60px 20px 20px;
-    font-family: sans-serif;
-  }
-  
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .footer-brand h2 {
-    font-size: 28px;
-    font-weight: 600;
-  }
-  
-  .footer-brand sup {
-    font-size: 16px;
-    color: #f7a6b8;
-  }
-  
-  .footer-brand p {
-    margin-top: 10px;
-    color: #ccc;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-  
-  .footer-newsletter {
-    flex: 1;
-    min-width: 250px;
-    max-width: 400px;
-  }
-  
-  .footer-newsletter .newsletter-title {
-    font-size: 12px;
-    color: #ccc;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    line-height: 1.5;
-  }
-  
-  .subscribe-form {
-    display: flex;
-    max-width: 100%;
-  }
-  
-  .subscribe-form input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #444;
-    background: transparent;
-    color: white;
-    font-size: 14px;
-    outline: none;
-  }
-  
-  .subscribe-form button {
-    padding: 10px 20px;
-    background: 
-      linear-gradient(135deg, #584688, #D24195, #F27236) padding-box,
-      linear-gradient(135deg, #584688, #D24195, #F27236) border-box;
-    border: 2px solid transparent;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  
-  
-  .footer-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .footer-contact p {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #aaa;
-    margin-bottom: 5px;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 10px;
-    margin-top: 5px;
-  }
-  
-  .social-icons i {
-    font-size: 16px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .call .number {
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .footer-bottom {
-    border-top: 1px solid #444;
-    margin-top: 40px;
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-size: 12px;
-    color: #999;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .footer-links a {
-    color: #999;
-    margin-left: 20px;
-    text-decoration: none;
-    font-size: 12px;
-  }
-  .reach-us-section {
-    position: relative;
-    background: url('./photo/sliders/—Pngtree—illustrated 3d concept of a_6298119.jpg') no-repeat center center / cover;
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:20px 20px 47px 20px;
-    overflow: hidden;
-  }
-  
-  .reach-us-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(10px); /* Full blur effect */
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1); /* Optional tint */
-    z-index: 1;
-  }
-  
-  .reach-us-container {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
-  
-  .reach-us-container h2 {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
-  .reach-us-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .reach-us-buttons .btn {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    color: white;
-    padding: 14px 30px;
-    border-radius: 30px;
-    font-size: 16px;
-    min-width: 220px;
-    cursor: pointer;
-    text-align: center;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    transition: 0.3s ease;
-  }
-  
-  .reach-us-buttons .btn:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: scale(1.07);
-  }
-  
-  /* Footer Styling */
 .footer {
   background-color: #121016;
   color: white;
@@ -1432,34 +1341,94 @@ h2::after {
 .footer-contact {
   flex: 1 1 250px;
 }
+.footer-brand{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 10px;
+  max-width: 320px;
+  font-family: 'Poppins', sans-serif;
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 14px;
+}
+.footer-brand h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.footer-brand sup {
+  font-size: 16px;
+  color: #f7a6b8;
+}
+
+.footer-brand p {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.5;
+}
 
 .footer-newsletter .newsletter-title {
+  font-size: 12px;
+  color: #ccc;
+  text-transform: uppercase;
   margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 .subscribe-form {
   display: flex;
   gap: 10px;
+  max-width: 100%;
 }
 
 .subscribe-form input[type="email"] {
   padding: 10px;
   flex: 1;
-  border: none;
+  border: 1px solid #444;
+  background: transparent;
+  color: white;
+  font-size: 14px;
   border-radius: 5px;
+  outline: none;
 }
 
 .subscribe-form button {
-  padding: 10px 16px;
+  padding: 10px 20px;
   background: linear-gradient(135deg, #584688, #D24195, #F27236);
   border: none;
   border-radius: 5px;
   color: white;
+  font-weight: bold;
   cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-contact p {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .social p {
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
 }
 
 .social-icons {
@@ -1467,14 +1436,28 @@ h2::after {
   flex-wrap: wrap;
   gap: 12px;
   font-size: 20px;
-  margin-top: 4px;
+  margin-top: 0;
+ justify-content: center;
+
+  
+}
+
+.social-icons i {
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #f7a6b8;
 }
 
 .call .number {
+  font-size: 16px;
   font-weight: bold;
+  color: white;
 }
 
-/* Footer Bottom Bar */
 .footer-bottom {
   border-top: 1px solid #333;
   margin-top: 30px;
@@ -1485,6 +1468,8 @@ h2::after {
   align-items: center;
   max-width: 1200px;
   margin: 30px auto 0;
+  font-size: 12px;
+  color: #999;
 }
 
 .footer-bottom p {
@@ -1499,6 +1484,7 @@ h2::after {
 .footer-links a {
   color: #ccc;
   text-decoration: none;
+  font-size: 12px;
 }
 
 /* Responsive Styles */
@@ -1508,13 +1494,27 @@ h2::after {
     gap: 30px;
   }
 
+  .footer-brand,
+  .footer-newsletter,
+  .footer-contact {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
   .subscribe-form {
     flex-direction: column;
+    width: 100%;
   }
 
   .subscribe-form input[type="email"],
   .subscribe-form button {
     width: 100%;
+    margin: 5px 0;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-left: 0;
   }
 
   .footer-bottom {
@@ -1522,10 +1522,82 @@ h2::after {
     align-items: flex-start;
     gap: 10px;
   }
-}/* Styling specifically for the Graphics card-back */
+
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+}
 
 
-/* Title styling */
+.reach-us-section {
+  position: relative;
+  background: url('./photo/sliders/—Pngtree—illustrated 3d concept of a_6298119.jpg') no-repeat center center / cover;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 47px 20px;
+  overflow: hidden;
+}
+
+.reach-us-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.reach-us-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.reach-us-container h2 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.reach-us-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.reach-us-buttons .btn {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  min-width: 220px;
+  cursor: pointer;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.reach-us-buttons .btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.07);
+}
+
+
 .card-back.graphics-back .graphics-title {
   color: white;
   font-size: 18px;
@@ -1533,25 +1605,17 @@ h2::after {
   font-weight: bold;
 }
 
-/* List styling */
 .card-back.graphics-back .graphics-list {
   list-style-type: disc;
-  padding-left: 53px;        /* Reset default list padding */
+  padding-left: 53px;
   margin: 0;
   width: 100%;
   text-align: left;
 }
 
 .card-back.graphics-back .graphics-list li {
-     /* Inner padding for each list item */
-  margin-bottom: 6px;
-  color: #ffffff;
-  position: relative;
-}
-
-
-.card-back.graphics-back .graphics-list li {
   font-size: 14px;
   color: #ffffff;
   margin-bottom: 6px;
+  position: relative;
 }

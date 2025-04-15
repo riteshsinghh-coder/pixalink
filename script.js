@@ -11,13 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".slide img");
     const modal = document.createElement("div");
     modal.classList.add("image-modal");
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img class="modal-img" src="" alt="">
-        </div>
-    `;
+modal.style.display = "none"; // <-- Hides it by default
+modal.innerHTML = `
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img class="modal-img" src="" alt="">
+    </div>
+`;
+
     document.body.appendChild(modal);
+    
 
     const modalImg = modal.querySelector(".modal-img");
     const closeModal = modal.querySelector(".close");
