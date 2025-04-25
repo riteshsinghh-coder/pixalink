@@ -53,16 +53,22 @@ document.addEventListener("DOMContentLoaded", function () {
     if (getInTouchBtn) {
         getInTouchBtn.addEventListener("click", function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            const navbarHeight = navbar.offsetHeight;
-            const offset = -30;
-
-            window.scrollTo({
-                top: target.offsetTop - navbarHeight + offset,
-                behavior: "smooth"
-            });
+    
+            const isMobile = window.innerWidth <= 768;
+            const targetId = isMobile ? '#contact-mobile' : '#contact-desktop';
+            const target = document.querySelector(targetId);
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const offset = isMobile ? -45 : -30;
+    
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - navbarHeight + offset,
+                    behavior: "smooth"
+                });
+            }
         });
     }
+    
 
     // Custom scroll for "SEE ALL SERVICES" button
     const seeAllServicesBtn = document.querySelector('.btn[href="#industries"]');
